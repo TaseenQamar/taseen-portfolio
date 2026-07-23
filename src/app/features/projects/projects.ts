@@ -26,7 +26,7 @@ export class Projects {
       tags: ['Angular', 'AI Automation', 'NestJS', 'n8n-style', 'Postgres'],
       url: 'https://github.com/TaseenQamar/workflow-builder',
       demoUrl: 'https://workflow-builder-delta-tawny.vercel.app',
-      image: '/taseen-contra-cover.png',
+      image: null,
     },
     {
       index: '02',
