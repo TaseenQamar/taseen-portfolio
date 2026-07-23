@@ -7,7 +7,6 @@ export type PortfolioProject = {
   tags: string[];
   url: string | null;
   demoUrl?: string | null;
-  image?: string | null;
 };
 
 @Component({
@@ -26,7 +25,6 @@ export class Projects {
       tags: ['Angular', 'AI Automation', 'NestJS', 'n8n-style', 'Postgres'],
       url: 'https://github.com/TaseenQamar/workflow-builder',
       demoUrl: 'https://workflow-builder-delta-tawny.vercel.app',
-      image: null,
     },
     {
       index: '02',
@@ -36,7 +34,6 @@ export class Projects {
       tags: ['Angular 20', 'TypeScript', 'Reusable UI', 'Data UX'],
       url: 'https://github.com/TaseenQamar/dynamic-data-table',
       demoUrl: null,
-      image: null,
     },
     {
       index: '03',
@@ -46,7 +43,6 @@ export class Projects {
       tags: ['NestJS', 'Postgres', 'OpenAI', 'Gemini', 'API'],
       url: 'https://github.com/TaseenQamar/workflow-build-backend',
       demoUrl: null,
-      image: null,
     },
   ];
 }

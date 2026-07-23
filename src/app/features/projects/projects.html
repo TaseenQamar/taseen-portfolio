@@ -12,12 +12,6 @@
         <li class="projects__item">
           <div class="projects__index">{{ project.index }}</div>
           <div class="projects__content">
-            @if (project.image) {
-              <div class="projects__media">
-                <img [src]="project.image" [alt]="project.title + ' preview'" />
-              </div>
-            }
-
             <div class="projects__heading">
               <h3>{{ project.title }}</h3>
               <div class="projects__links">
