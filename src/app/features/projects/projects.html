@@ -1,0 +1,39 @@
+<section id="projects" class="section projects">
+  <div class="container">
+    <p class="section-label">Selected Work</p>
+    <h2 class="section-title">Projects that<br />define the standard.</h2>
+    <p class="section-lead projects__lead">
+      A snapshot of products and platforms shaped with Angular and modern
+      frontend engineering.
+    </p>
+
+    <ul class="projects__list">
+      @for (project of projects; track project.title) {
+        <li class="projects__item">
+          <div class="projects__index">{{ project.index }}</div>
+          <div class="projects__content">
+            <div class="projects__heading">
+              <h3>{{ project.title }}</h3>
+              @if (project.url) {
+                <a
+                  class="projects__link"
+                  [href]="project.url"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on GitHub
+                </a>
+              }
+            </div>
+            <p>{{ project.description }}</p>
+            <div class="projects__tags">
+              @for (tag of project.tags; track tag) {
+                <span>{{ tag }}</span>
+              }
+            </div>
+          </div>
+        </li>
+      }
+    </ul>
+  </div>
+</section>
