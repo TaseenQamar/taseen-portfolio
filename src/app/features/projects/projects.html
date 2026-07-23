@@ -3,7 +3,7 @@
     <p class="section-label">Selected Work</p>
     <h2 class="section-title">Projects that<br />define the standard.</h2>
     <p class="section-lead projects__lead">
-      A snapshot of products and platforms shaped with Angular and modern
+      A snapshot of products shaped with Angular, AI automation, and modern
       frontend engineering.
     </p>
 
@@ -12,18 +12,36 @@
         <li class="projects__item">
           <div class="projects__index">{{ project.index }}</div>
           <div class="projects__content">
+            @if (project.image) {
+              <div class="projects__media">
+                <img [src]="project.image" [alt]="project.title + ' preview'" />
+              </div>
+            }
+
             <div class="projects__heading">
               <h3>{{ project.title }}</h3>
-              @if (project.url) {
-                <a
-                  class="projects__link"
-                  [href]="project.url"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View on GitHub
-                </a>
-              }
+              <div class="projects__links">
+                @if (project.demoUrl) {
+                  <a
+                    class="projects__link"
+                    [href]="project.demoUrl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Live Demo
+                  </a>
+                }
+                @if (project.url) {
+                  <a
+                    class="projects__link"
+                    [href]="project.url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                }
+              </div>
             </div>
             <p>{{ project.description }}</p>
             <div class="projects__tags">

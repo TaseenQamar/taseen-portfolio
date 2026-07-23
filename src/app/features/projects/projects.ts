@@ -1,5 +1,15 @@
 import { Component } from '@angular/core';
 
+export type PortfolioProject = {
+  index: string;
+  title: string;
+  description: string;
+  tags: string[];
+  url: string | null;
+  demoUrl?: string | null;
+  image?: string | null;
+};
+
 @Component({
   selector: 'app-projects',
   imports: [],
@@ -7,30 +17,36 @@ import { Component } from '@angular/core';
   styleUrl: './projects.scss',
 })
 export class Projects {
-  readonly projects = [
+  readonly projects: PortfolioProject[] = [
     {
       index: '01',
+      title: 'Workflow AI Automation',
+      description:
+        'A visual no-code workflow builder — like n8n/Zapier — with an Angular canvas, AI nodes, execution history, and a NestJS engine powered by Postgres, OpenAI, and Gemini.',
+      tags: ['Angular', 'AI Automation', 'NestJS', 'n8n-style', 'Postgres'],
+      url: 'https://github.com/TaseenQamar/workflow-builder',
+      demoUrl: 'https://workflow-builder-delta-tawny.vercel.app',
+      image: '/taseen-contra-cover.png',
+    },
+    {
+      index: '02',
       title: 'Dynamic Data Table',
       description:
         'An Angular 20 data table experience with flexible columns, sorting, and reusable table architecture for enterprise-style datasets.',
       tags: ['Angular 20', 'TypeScript', 'Reusable UI', 'Data UX'],
       url: 'https://github.com/TaseenQamar/dynamic-data-table',
-    },
-    {
-      index: '02',
-      title: 'Enterprise Admin Platform',
-      description:
-        'A multi-module Angular workspace for operations teams — role-based access, realtime updates, and a design system built for scale.',
-      tags: ['Angular', 'RxJS', 'Signals', 'Design System'],
-      url: null,
+      demoUrl: null,
+      image: null,
     },
     {
       index: '03',
-      title: 'Customer Experience Portal',
+      title: 'Workflow Automation Backend',
       description:
-        'High-performance self-service experience with accessible UI, optimized routing, and polished micro-interactions.',
-      tags: ['TypeScript', 'Tailwind', 'SSR', 'A11y'],
-      url: null,
+        'NestJS execution engine for workflow runs — Postgres persistence, OpenAI/Gemini integrations, and APIs that power the visual builder.',
+      tags: ['NestJS', 'Postgres', 'OpenAI', 'Gemini', 'API'],
+      url: 'https://github.com/TaseenQamar/workflow-build-backend',
+      demoUrl: null,
+      image: null,
     },
   ];
 }

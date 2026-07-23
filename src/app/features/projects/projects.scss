@@ -51,6 +51,29 @@
   margin-bottom: 0.65rem;
 }
 
+.projects__media {
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg-elevated);
+}
+
+.projects__media img {
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.projects__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.25rem;
+}
+
 .projects__content h3 {
   margin: 0;
   font-family: var(--font-display);
